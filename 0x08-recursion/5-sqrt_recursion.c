@@ -26,5 +26,5 @@ int natural_sqrt_recursion(int n, int r)
 		return (-1);
 	if (r * r == n)
 		return (r);
-	return ( natural_sqrt_recursion(n, r + 1));
+	return (natural_sqrt_recursion(n, r + 1));
 }
