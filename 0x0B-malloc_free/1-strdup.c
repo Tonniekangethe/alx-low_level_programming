@@ -4,7 +4,7 @@
 
 /**
  * _strdup - pointer to  a duplicate of str
- * @str - parameter
+ * @str: parameter
  *
  * Return: a pointer dupstr
  */
@@ -21,6 +21,8 @@ char *_strdup(char *str)
 
 	dupstr = malloc(sizeof(str) * (x + 1));
 
+	if (dupstr == NULL)
+		return (NULL);
 	for (y = 0; str[y] ; y++)
 	{
 		dupstr[y] = str[y];
