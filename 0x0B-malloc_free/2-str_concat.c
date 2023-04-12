@@ -39,7 +39,8 @@ char *str_concat(char *s1, char *s2)
 	while (j <= n)
 	{
 		conc[i] = s2[j];
-	i++, j++;
+		i++;
+		j++;
 	}
 		return (conc);
 }
