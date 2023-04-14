@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
  /**
-  * string_nconcat - concatinating two strings
+  * string_nconcat - a function concatinating two strings
   * @s1: string
   * @s2 : string
   * @n: length of n to be concacinated
@@ -11,7 +11,7 @@
   */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int x, y, i, j;
+	unsigned int x, y, i;
 	char *ptr;
 
 	if (s1 == NULL)
@@ -43,12 +43,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		ptr[i] = s1[i];
 	}
-	j = 0;
-	while (n < y && i < (x + n))
-		ptr[i++] = s2[j++];
-	j = 0;
-	while (n >= y && 1 < (x + y))
-		ptr[i] = s2[j++];
-	ptr[i] = '\0';
+	for (i = 0 ; i < y ; i++)
+	{
+		ptr[i + x] = s2[y]
+	ptr[x + y] = '\0';
 	return (ptr);
 }
