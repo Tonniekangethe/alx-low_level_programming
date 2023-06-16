@@ -2,6 +2,22 @@
 #include <stdlib.h>
 
 /**
+ * memset - a function that has constant byte
+ * @s: pointer
+ * @b: pointer
+ * @n: total bytes used
+ *
+ * Return: ptr
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	char *p = s;
+
+	while (n--)
+		*s++ = b;
+	return (p);
+}
+/**
  * _calloc - allocates memory for an array
  * @nmemb: number of elements in an array
  * @size: byte of each element
@@ -11,17 +27,13 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *s;
-	unsigned int i = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	s = malloc(nmemb * size);
+	s = malloc(nmemb * sizeof(int));
 	if (s == NULL)
 		return (NULL);
-	while (i < (nmemb * size))
-	{
-		i++;
-	}
-	s[i] = 0;
+
+	_memset(s, 0, sizeof(int) * nmemb);
 	return (s);
 }
